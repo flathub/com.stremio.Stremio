@@ -55,7 +55,9 @@
       },
       "post-install": [
         "install -Dm755 server.js /app/opt/stremio/server.js",
-        "install -Dm644 com.stremio.Stremio.desktop /app/share/applications/com.stremio.Stremio.desktop",
+        "install -Dm644 smartcode-stremio.desktop /app/share/applications/com.stremio.Stremio.desktop",
+        "desktop-file-edit --set-icon=com.stremio.Stremio /app/share/applications/com.stremio.Stremio.desktop",
+        "desktop-file-edit --set-key=Exec --set-value='/app/opt/stremio/stremio %U' /app/share/applications/com.stremio.Stremio.desktop",
         "install -Dm644 ./images/stremio.svg /app/share/icons/hicolor/scalable/apps/com.stremio.Stremio.svg",
         "install -Dm644 ./images/stremio_tray_black.svg /app/share/icons/hicolor/scalable/apps/com.stremio.Stremio-symbolic.svg",
         "install -Dm644 com.stremio.Stremio.metainfo.xml /app/share/metainfo/com.stremio.Stremio.metainfo.xml",
@@ -72,10 +74,6 @@
           "type": "file",
           "url": "https://dl.strem.io/four/v4.4.120/server.js",
           "sha256": "241f5633528e9f19c84c7ca41266771c309e286d6d9393a99e0fbce2203a3caa"
-        },
-        {
-          "type": "file",
-          "path": "com.stremio.Stremio.desktop"
         },
         {
           "type": "file",
