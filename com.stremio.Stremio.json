@@ -68,12 +68,12 @@
         {
           "type": "git",
           "url": "https://github.com/Stremio/stremio-shell.git",
-          "tag": "6f8c355973d9faa05d72daad61fa318d5a702d16"
+          "tag": "ccb1e6000e24f344e9620f4076080dcec7fa3a19"
         },
         {
           "type": "file",
-          "url": "https://dl.strem.io/four/v4.4.120/server.js",
-          "sha256": "241f5633528e9f19c84c7ca41266771c309e286d6d9393a99e0fbce2203a3caa"
+          "url": "https://dl.strem.io/four/v4.4.132/server.js",
+          "sha256": "cd87c56732857c9bf7785fbd9695fc1ad7d66a13ceb4ebd02f6fa601cba45c5e"
         },
         {
           "type": "file",
@@ -90,20 +90,20 @@
           ],
           "buildsystem": "simple",
           "build-commands": [
-            "python3 waf configure --prefix=/app --enable-libmpv-shared --disable-cplayer --disable-build-date --disable-oss-audio --disable-alsa ",
+            "python3 waf configure --prefix=/app --enable-libmpv-shared --disable-cplayer --disable-build-date --disable-alsa ",
             "python3 waf build",
             "python3 waf install"
           ],
           "sources": [
             {
               "type": "archive",
-              "url": "https://github.com/mpv-player/mpv/archive/v0.31.0.tar.gz",
-              "sha256": "805a3ac8cf51bfdea6087a6480c18835101da0355c8e469b6d488a1e290585a5"
+              "url": "https://github.com/mpv-player/mpv/archive/v0.33.0.tar.gz",
+              "sha256": "f1b9baf5dc2eeaf376597c28a6281facf6ed98ff3d567e3955c95bf2459520b4"
             },
             {
               "type": "file",
-              "url": "https://waf.io/waf-2.0.19",
-              "sha256": "ba63c90a865a9bcf46926c4e6776f9a3f73d29f33d49b7f61f96bc37b7397cef",
+              "url": "https://waf.io/waf-2.0.9",
+              "sha256": "2a8e0816f023995e557f79ea8940d322bec18f286917c8f9a6fa2dc3875dfa48",
               "dest-filename": "waf"
             }
           ],
