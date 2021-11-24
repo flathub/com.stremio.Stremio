@@ -37,8 +37,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://nodejs.org/dist/latest-v15.x/node-v15.8.0-linux-x64.tar.xz",
-          "sha256": "cdb80f0810e5a076eb6079297073147d2564b1c2292bb4436b3f9e9e4fe18759"
+          "url": "https://nodejs.org/dist/latest-v15.x/node-v15.14.0-linux-x64.tar.xz",
+          "sha256": "f40a52c77a5a98203d24d6e5213c1a189bfc9736d0d9f667cb61151e9431b2a8"
         }
       ]
     },
