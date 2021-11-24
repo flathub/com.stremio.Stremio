@@ -37,8 +37,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://nodejs.org/dist/latest-v15.x/node-v15.8.0-linux-x64.tar.xz",
-          "sha256": "cdb80f0810e5a076eb6079297073147d2564b1c2292bb4436b3f9e9e4fe18759"
+          "url": "https://nodejs.org/dist/latest-v15.x/node-v15.14.0-linux-x64.tar.xz",
+          "sha256": "f40a52c77a5a98203d24d6e5213c1a189bfc9736d0d9f667cb61151e9431b2a8"
         }
       ]
     },
@@ -68,12 +68,12 @@
         {
           "type": "git",
           "url": "https://github.com/Stremio/stremio-shell.git",
-          "tag": "v4.4.137"
+          "tag": "v4.4.142"
         },
         {
           "type": "file",
-          "url": "https://dl.strem.io/four/v4.4.137/server.js",
-          "sha256": "7a722fc1315f03f43179070f0ad5a63e4f4b99b677537b72e92c15a5b277f988"
+          "url": "https://dl.strem.io/four/v4.4.142/server.js",
+          "sha256": "618783dd211b2e03501c63f9008f56887514eb12e44de140a9822e5ac22c612b"
         },
         {
           "type": "file",
