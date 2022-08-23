@@ -67,12 +67,12 @@
         {
           "type": "git",
           "url": "https://github.com/Stremio/stremio-shell.git",
-          "tag": "v4.4.142"
+          "tag": "v4.4.159"
         },
         {
           "type": "file",
-          "url": "https://dl.strem.io/four/v4.4.142/server.js",
-          "sha256": "618783dd211b2e03501c63f9008f56887514eb12e44de140a9822e5ac22c612b"
+          "url": "https://dl.strem.io/four/v4.4.159/server.js",
+          "sha256": "c31c98fe4cd8158523c45685ba2a949cffd3fc0f06dffef66797d07e3a2bbbee"
         },
         {
           "type": "file",
