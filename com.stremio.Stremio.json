@@ -89,7 +89,7 @@
           ],
           "buildsystem": "simple",
           "build-commands": [
-            "python3 waf configure --prefix=/app --enable-libmpv-shared --disable-cplayer --disable-build-date --disable-alsa ",
+            "python3 waf configure --prefix=/app --disable-manpage-build --enable-libmpv-shared --disable-cplayer --disable-build-date --disable-alsa --disable-pipewire",
             "python3 waf build",
             "python3 waf install"
           ],
