@@ -18,7 +18,6 @@
     "--talk-name=org.freedesktop.ScreenSaver",
     "--talk-name=org.freedesktop.Notifications",
     "--talk-name=org.kde.StatusNotifierWatcher",
-    "--own-name=org.kde.*",
     "--env=TMPDIR=/var/cache/tmp"
   ],
   "cleanup": [
