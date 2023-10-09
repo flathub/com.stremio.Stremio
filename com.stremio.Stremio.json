@@ -5,7 +5,7 @@
   "base": "io.qt.qtwebengine.BaseApp",
   "base-version": "5.15-21.08",
   "sdk": "org.kde.Sdk",
-  "command": "/app/opt/stremio/stremio",
+  "command": "stremio",
   "separate-locales": true,
   "finish-args": [
     "--share=ipc",
@@ -43,7 +43,7 @@
     },
     {
       "name": "stremio",
-      "buildsystem": "cmake",
+      "buildsystem": "cmake-ninja",
       "config-opts": [
         "-DCMAKE_BUILD_TYPE=Release"
       ],
@@ -60,6 +60,7 @@
         "install -Dm644 ./images/stremio.svg /app/share/icons/hicolor/scalable/apps/com.stremio.Stremio.svg",
         "install -Dm644 ./images/stremio_tray_black.svg /app/share/icons/hicolor/scalable/apps/com.stremio.Stremio-symbolic.svg",
         "install -Dm644 com.stremio.Stremio.metainfo.xml /app/share/metainfo/com.stremio.Stremio.metainfo.xml",
+        "ln -s /app/opt/stremio/stremio /app/bin/stremio",
         "ln -s /app/bin/node /app/opt/stremio/node",
         "ln -s /app/bin/QtWebEngineProcess /app/opt/stremio/QtWebEngineProcess"
       ],
