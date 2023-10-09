@@ -1,11 +1,11 @@
 {
   "app-id": "com.stremio.Stremio",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.15-21.08",
+  "runtime-version": "5.15-22.08",
   "base": "io.qt.qtwebengine.BaseApp",
-  "base-version": "5.15-21.08",
+  "base-version": "5.15-22.08",
   "sdk": "org.kde.Sdk",
-  "command": "/app/opt/stremio/stremio",
+  "command": "stremio",
   "separate-locales": true,
   "finish-args": [
     "--share=ipc",
@@ -14,10 +14,10 @@
     "--socket=fallback-x11",
     "--socket=wayland",
     "--socket=pulseaudio",
+    "--persist=.stremio-server",
     "--talk-name=org.freedesktop.ScreenSaver",
     "--talk-name=org.freedesktop.Notifications",
     "--talk-name=org.kde.StatusNotifierWatcher",
-    "--own-name=org.kde.*",
     "--env=TMPDIR=/var/cache/tmp"
   ],
   "cleanup": [
@@ -43,7 +43,7 @@
     },
     {
       "name": "stremio",
-      "buildsystem": "cmake",
+      "buildsystem": "cmake-ninja",
       "config-opts": [
         "-DCMAKE_BUILD_TYPE=Release"
       ],
@@ -60,6 +60,7 @@
         "install -Dm644 ./images/stremio.svg /app/share/icons/hicolor/scalable/apps/com.stremio.Stremio.svg",
         "install -Dm644 ./images/stremio_tray_black.svg /app/share/icons/hicolor/scalable/apps/com.stremio.Stremio-symbolic.svg",
         "install -Dm644 com.stremio.Stremio.metainfo.xml /app/share/metainfo/com.stremio.Stremio.metainfo.xml",
+        "ln -s /app/opt/stremio/stremio /app/bin/stremio",
         "ln -s /app/bin/node /app/opt/stremio/node",
         "ln -s /app/bin/QtWebEngineProcess /app/opt/stremio/QtWebEngineProcess"
       ],
@@ -67,12 +68,12 @@
         {
           "type": "git",
           "url": "https://github.com/Stremio/stremio-shell.git",
-          "tag": "v4.4.159"
+          "tag": "v4.4.164"
         },
         {
           "type": "file",
-          "url": "https://dl.strem.io/four/v4.4.159/server.js",
-          "sha256": "c31c98fe4cd8158523c45685ba2a949cffd3fc0f06dffef66797d07e3a2bbbee"
+          "url": "https://dl.strem.io/server/v4.20.2/desktop/server.js",
+          "sha256": "62da101bca69055a5ef3a0e3c912a10f0987855458a483a4103b87db562c7960"
         },
         {
           "type": "file",

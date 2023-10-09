@@ -2,35 +2,25 @@
 <component type="desktop">
   <id>com.stremio.Stremio</id>
   <name>Stremio</name>
-  <summary>Watch videos, movies, TV series and TV channels instantly.</summary>
+  <summary>Watch videos, movies, TV series and TV channels instantly</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <description>
     <p>
-      Watch videos, movies, TV series and TV channels instantly.
+       Stremio offers a secure, modern and seamless entertainment experience. With its easy-to-use interface and diverse content library, including 4K HDR support, users can enjoy their favorite movies and TV shows across all their devices. And with its commitment to security, Stremio is the ultimate choice for a worry-free, high-quality streaming experience.
     </p>
   </description>
   <url type="homepage">https://www.stremio.com/</url>
   <project_license>GPL-3.0+</project_license>
   <screenshots>
-    <screenshot height="510" width="800" type="default">
-      <image>https://www.stremio.com/website/features-discover.jpg</image>
+    <screenshot height="581" width="691" type="default">
+      <image>https://www.stremio.com/website/desktop-app-mockup.png</image>
       <caption>Discover new content with ease</caption>
-    </screenshot>
-    <screenshot height="690" width="944">
-      <image>https://www.stremio.com/website/features-all.jpg</image>
-      <caption>All of your video content on one screen</caption>
-    </screenshot>
-    <screenshot height="563" width="800">
-      <image>https://www.stremio.com/website/features-library.jpg</image>
-      <caption>Organize your video library</caption>
-    </screenshot>
-    <screenshot height="666" width="1320">
-      <image>https://www.stremio.com/website/features-calendar.jpg</image>
-      <caption>Keep track of everything you watch</caption>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="4.4.164" date="2023-09-21" />
+    <release version="4.4.160" date="2023-06-01" />
     <release version="4.4.159" date="2022-08-23" />
     <release version="4.4.142" date="2021-07-07" />
     <release version="4.4.137" date="2021-04-28" />
