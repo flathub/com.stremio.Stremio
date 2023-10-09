@@ -2,11 +2,11 @@
 <component type="desktop">
   <id>com.stremio.Stremio</id>
   <name>Stremio</name>
-  <summary>Watch videos, movies, TV series and TV channels instantly.</summary>
+  <summary>Watch videos, movies, TV series and TV channels instantly</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <description>
     <p>
-      Watch videos, movies, TV series and TV channels instantly.
+       Stremio offers a secure, modern and seamless entertainment experience. With its easy-to-use interface and diverse content library, including 4K HDR support, users can enjoy their favorite movies and TV shows across all their devices. And with its commitment to security, Stremio is the ultimate choice for a worry-free, high-quality streaming experience.
     </p>
   </description>
   <url type="homepage">https://www.stremio.com/</url>
