@@ -2,8 +2,11 @@
 <component type="desktop">
   <id>com.stremio.Stremio</id>
   <name>Stremio</name>
-  <summary>Watch videos, movies, TV series and TV channels instantly</summary>
+  <summary>Freedom to Stream</summary>
   <metadata_license>CC0-1.0</metadata_license>
+  <developer id="com.stremio">
+    <name>Stremio</name>
+  </developer>
   <description>
     <p>
        Stremio offers a secure, modern and seamless entertainment experience. With its easy-to-use interface and diverse content library, including 4K HDR support, users can enjoy their favorite movies and TV shows across all their devices. And with its commitment to security, Stremio is the ultimate choice for a worry-free, high-quality streaming experience.
@@ -11,6 +14,7 @@
   </description>
   <url type="homepage">https://www.stremio.com/</url>
   <project_license>GPL-3.0+</project_license>
+  <launchable type="desktop-id">com.stremio.Stremio.desktop</launchable>
   <screenshots>
     <screenshot height="581" width="691" type="default">
       <image>https://www.stremio.com/website/desktop-app-mockup.png</image>
@@ -19,6 +23,7 @@
   </screenshots>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="4.4.168" date="2024-03-28" />
     <release version="4.4.165" date="2023-12-19" />
     <release version="4.4.164" date="2023-09-21" />
     <release version="4.4.160" date="2023-06-01" />
