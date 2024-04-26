@@ -102,8 +102,8 @@
             },
             {
               "type": "file",
-              "url": "https://waf.io/waf-2.0.9",
-              "sha256": "2a8e0816f023995e557f79ea8940d322bec18f286917c8f9a6fa2dc3875dfa48",
+              "url": "https://waf.io/waf-2.0.27",
+              "sha256": "fe10e266c05063752d098787a7b934cd0d61092c8b072884f8a679c1c596dd6a",
               "dest-filename": "waf"
             }
           ],
@@ -140,7 +140,8 @@
                 "--disable-programs",
                 "--disable-encoders",
                 "--disable-muxers",
-                "--enable-encoder=png"
+                "--enable-encoder=png",
+                "--disable-inline-asm"
               ],
               "sources": [
                 {
