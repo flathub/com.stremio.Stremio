@@ -71,7 +71,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Stremio/stremio-linux-shell.git",
-                    "tag": "v1.0.0-beta.9"
+                    "tag": "v1.0.0-beta.10"
                 },
                 "cargo-sources.json"
             ],

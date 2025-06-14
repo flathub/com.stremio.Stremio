@@ -14,8 +14,8 @@
     {
         "type": "git",
         "url": "https://github.com/stremio/libmpv2-rs",
-        "commit": "acf21f7a23a346de8c1474aea7d8c56261f4ba06",
-        "dest": "flatpak-cargo/git/libmpv2-rs-acf21f7"
+        "commit": "b2b0ce03fde964c0c5cd4f66e193740062468b41",
+        "dest": "flatpak-cargo/git/libmpv2-rs-b2b0ce0"
     },
     {
         "type": "archive",
@@ -2962,7 +2962,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/libmpv2-rs-acf21f7/.\" \"cargo/vendor/libmpv2\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/libmpv2-rs-b2b0ce0/.\" \"cargo/vendor/libmpv2\""
         ]
     },
     {
@@ -2980,7 +2980,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/libmpv2-rs-acf21f7/libmpv-sys\" \"cargo/vendor/libmpv2-sys\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/libmpv2-rs-b2b0ce0/libmpv-sys\" \"cargo/vendor/libmpv2-sys\""
         ]
     },
     {
