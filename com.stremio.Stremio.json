@@ -71,7 +71,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Stremio/stremio-linux-shell.git",
-                    "tag": "v1.0.0-beta.10"
+                    "tag": "v1.0.0-beta.11"
                 },
                 "cargo-sources.json"
             ],
@@ -148,8 +148,8 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "https://cef-builds.spotifycdn.com/cef_binary_135.0.22+g442c600+chromium-135.0.7049.115_linux64_minimal.tar.bz2",
-                            "sha256": "f1915eadae05a3db7c3d0256d9aef191da06ef4bf7d906504aab248904557245"
+                            "url": "https://cef-builds.spotifycdn.com/cef_binary_137.0.11+gab5769c+chromium-137.0.7151.104_linux64_minimal.tar.bz2",
+                            "sha256": "00988723a7f94dced51d0755757f34952a93ededf5c5dbeff4ab48eb6b183d35"
                         }
                     ]
                 }
