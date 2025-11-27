@@ -32,7 +32,6 @@
         "--filesystem=xdg-download",
         "--filesystem=xdg-run/stremio:create",
         "--env=LD_LIBRARY_PATH=/app/lib/:/app/share/stremio",
-        "--system-talk-name=org.freedesktop.systemd1",
         "--system-talk-name=org.freedesktop.UPower",
         "--talk-name=org.kde.StatusNotifierWatcher",
         "--talk-name=org.kde.kwalletd6"
@@ -61,6 +60,7 @@
             "post-install": [
                 "install -Dm755 data/stremio -t /app/bin/",
                 "install -Dm755 target/release/stremio-linux-shell /app/share/stremio/stremio",
+                "install -Dm644 data/server.js -t /app/share/stremio/",
                 "install -Dm644 data/icons/com.stremio.Stremio.svg -t /app/share/icons/hicolor/scalable/apps/",
                 "install -Dm644 data/com.stremio.Stremio.desktop /app/share/applications/com.stremio.Stremio.desktop",
                 "install -Dm644 data/com.stremio.Stremio.metainfo.xml /app/share/metainfo/com.stremio.Stremio.metainfo.xml",
@@ -71,7 +71,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Stremio/stremio-linux-shell.git",
-                    "tag": "v1.0.0-beta.11"
+                    "tag": "v1.0.0-beta.12"
                 },
                 "cargo-sources.json"
             ],
@@ -148,8 +148,8 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "https://cef-builds.spotifycdn.com/cef_binary_137.0.11+gab5769c+chromium-137.0.7151.104_linux64_minimal.tar.bz2",
-                            "sha256": "00988723a7f94dced51d0755757f34952a93ededf5c5dbeff4ab48eb6b183d35"
+                            "url": "https://cef-builds.spotifycdn.com/cef_binary_138.0.21+g54811fe+chromium-138.0.7204.101_linux64_minimal.tar.bz2",
+                            "sha256": "2a86ffe653dd65cf4920fc73aa225735231ac4bb80bcd40a75dfc0643897bcd2"
                         }
                     ]
                 }
