@@ -3,6 +3,10 @@
   <id>com.stremio.Stremio</id>
   <name>Stremio</name>
   <summary>Freedom to Stream</summary>
+  <branding>
+    <color type="primary" scheme_preference="light">#9d84ff</color>
+    <color type="primary" scheme_preference="dark">#211e45</color>
+  </branding>
   <metadata_license>CC0-1.0</metadata_license>
   <developer id="com.stremio">
     <name>Stremio</name>
@@ -16,8 +20,8 @@
   <project_license>GPL-3.0+</project_license>
   <launchable type="desktop-id">com.stremio.Stremio.desktop</launchable>
   <screenshots>
-    <screenshot height="581" width="691" type="default">
-      <image>https://www.stremio.com/website/desktop-app-mockup.png</image>
+    <screenshot height="878" width="1148" type="default">
+      <image>https://github.com/user-attachments/assets/c94e4d6c-d5fe-4fe7-8fc0-90acbaf93654</image>
       <caption>Discover new content with ease</caption>
     </screenshot>
   </screenshots>
