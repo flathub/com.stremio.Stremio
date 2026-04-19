@@ -7,7 +7,7 @@
         "org.freedesktop.Sdk.Extension.rust-stable"
     ],
     "add-extensions": {
-        "org.freedesktop.Platform.ffmpeg-full": {
+        "org.freedesktop.Platform.codecs_extra": {
             "version": "25.08",
             "directory": "lib/ffmpeg",
             "add-ld-path": "."
