@@ -68,7 +68,7 @@
         {
           "type": "git",
           "url": "https://github.com/Stremio/stremio-shell.git",
-          "tag": "v4.4.168"
+          "tag": "v4.4.183"
         },
         {
           "type": "file",
