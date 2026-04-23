@@ -90,15 +90,15 @@
           ],
           "buildsystem": "simple",
           "build-commands": [
-            "python3 waf configure --prefix=/app --enable-libmpv-shared --disable-cplayer --disable-build-date --disable-alsa ",
+            "python3 waf configure --prefix=/app --enable-libmpv-shared --disable-vulkan --disable-cplayer --disable-build-date --disable-alsa ",
             "python3 waf build",
             "python3 waf install"
           ],
           "sources": [
             {
               "type": "archive",
-              "url": "https://github.com/mpv-player/mpv/archive/v0.33.0.tar.gz",
-              "sha256": "f1b9baf5dc2eeaf376597c28a6281facf6ed98ff3d567e3955c95bf2459520b4"
+              "url": "https://github.com/mpv-player/mpv/archive/v0.41.0.tar.gz",
+              "sha256": "ee21092a5ee427353392360929dc64645c54479aefdb5babc5cfbb5fad626209"
             },
             {
               "type": "file",
