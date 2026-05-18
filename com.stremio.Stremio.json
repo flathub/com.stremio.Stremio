@@ -121,7 +121,10 @@
           "buildsystem": "meson",
           "config-opts": [
             "-Dlibmpv=true",
-            "-Dvulkan=disabled"
+            "-Dcplayer=false",
+            "-Dbuild-date=false",
+            "-Dalsa=disabled",
+            "-Dmanpage-build=disabled"
           ],
           "sources": [
             {
