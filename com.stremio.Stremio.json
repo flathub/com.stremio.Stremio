@@ -1,19 +1,19 @@
 {
     "app-id": "com.stremio.Stremio",
-    "runtime": "org.freedesktop.Platform",
-    "runtime-version": "24.08",
-    "sdk": "org.freedesktop.Sdk",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "50",
+    "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
     ],
     "add-extensions": {
         "org.freedesktop.Platform.ffmpeg-full": {
-            "version": "24.08",
+            "version": "25.08",
             "directory": "lib/ffmpeg",
             "add-ld-path": "."
         },
         "org.freedesktop.Platform.VAAPI.Intel": {
-            "version": "24.08",
+            "version": "25.08",
             "directory": "lib/intel-vaapi-driver",
             "add-ld-path": ".",
             "download-if": "have-intel-gpu",
@@ -23,7 +23,7 @@
     "command": "stremio",
     "finish-args": [
         "--socket=wayland",
-        "--socket=x11",
+        "--socket=fallback-x11",
         "--socket=pulseaudio",
         "--share=ipc",
         "--share=network",
@@ -31,17 +31,12 @@
         "--persist=.stremio-server",
         "--filesystem=xdg-download",
         "--filesystem=xdg-run/stremio:create",
-        "--env=LD_LIBRARY_PATH=/app/lib/:/app/share/stremio",
-        "--system-talk-name=org.freedesktop.UPower",
         "--talk-name=org.kde.StatusNotifierWatcher",
-        "--talk-name=org.kde.kwalletd6"
+        "--own-name=org.mpris.MediaPlayer2.Stremio",
+        "--env=SERVER_PATH=/app/libexec/stremio/server.js"
     ],
     "build-options": {
-        "append-path": "/usr/lib/sdk/rust-stable/bin",
-        "append-pkg-config-path": "/app/lib/pkgconfig",
-        "env": {
-            "CEF_PATH": "/app/share/stremio"
-        }
+        "append-path": "/usr/lib/sdk/rust-stable/bin"
     },
     "modules": [
         {
@@ -58,12 +53,16 @@
                 "cargo --offline build --release --verbose -F offline-build"
             ],
             "post-install": [
-                "install -Dm755 data/stremio -t /app/bin/",
-                "install -Dm755 target/release/stremio-linux-shell /app/share/stremio/stremio",
-                "install -Dm644 data/server.js -t /app/share/stremio/",
+                "install -Dm755 target/release/stremio-linux-shell /app/libexec/stremio/stremio",
+                "install -Dm644 data/server.js -t /app/libexec/stremio",
+                "install -Dm755 data/stremio.sh /app/bin/stremio",
                 "install -Dm644 data/icons/com.stremio.Stremio.svg -t /app/share/icons/hicolor/scalable/apps/",
                 "install -Dm644 data/com.stremio.Stremio.desktop /app/share/applications/com.stremio.Stremio.desktop",
                 "install -Dm644 data/com.stremio.Stremio.metainfo.xml /app/share/metainfo/com.stremio.Stremio.metainfo.xml",
+                "install -Dm644 data/com.stremio.Stremio.service /app/share/dbus-1/services/com.stremio.Stremio.service",
+                "install -Dm644 po/es/LC_MESSAGES/stremio.mo -t /app/share/locale/es/LC_MESSAGES/",
+                "install -Dm644 po/fr/LC_MESSAGES/stremio.mo -t /app/share/locale/fr/LC_MESSAGES/",
+                "install -Dm644 ./LICENSE -t /app/share/licenses/stremio/",
                 "mkdir -p /app/lib/ffmpeg",
                 "mkdir -p /app/lib/intel-vaapi-driver"
             ],
@@ -71,7 +70,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Stremio/stremio-linux-shell.git",
-                    "tag": "v1.0.0-beta.13"
+                    "tag": "v1.0.0-beta.14"
                 },
                 "cargo-sources.json"
             ],
@@ -92,8 +91,8 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "https://github.com/mpv-player/mpv/archive/v0.40.0.tar.gz",
-                            "sha256": "10a0f4654f62140a6dd4d380dcf0bbdbdcf6e697556863dc499c296182f081a3"
+                            "url": "https://github.com/mpv-player/mpv/archive/v0.41.0.tar.gz",
+                            "sha256": "ee21092a5ee427353392360929dc64645c54479aefdb5babc5cfbb5fad626209"
                         }
                     ],
                     "modules": [
@@ -111,7 +110,7 @@
                                 {
                                     "type": "git",
                                     "url": "https://github.com/haasn/libplacebo.git",
-                                    "tag": "v7.349.0"
+                                    "tag": "v7.360.1"
                                 }
                             ]
                         },
@@ -125,31 +124,10 @@
                             "sources": [
                                 {
                                     "type": "archive",
-                                    "url": "https://github.com/libass/libass/archive/0.17.3.tar.gz",
-                                    "sha256": "26fbfb7a7bd3e6d5c713f8a65a12b36084d1dde6efaed8a9996489054c4aeca0"
+                                    "url": "https://github.com/libass/libass/archive/0.17.4.tar.gz",
+                                    "sha256": "c287d180d93dc9c9021872574b618ac49027e84cc90e1289318b1ee68bb42251"
                                 }
                             ]
-                        }
-                    ]
-                },
-                {
-                    "name": "cef",
-                    "buildsystem": "simple",
-                    "build-commands": [
-                        "install -D Release/libcef.so -t /app/share/stremio/",
-                        "install -D Release/libEGL.so -t /app/share/stremio/",
-                        "install -D Release/libGLESv2.so -t /app/share/stremio/",
-                        "install -D Release/libvk_swiftshader.so -t /app/share/stremio/",
-                        "install -D Release/v8_context_snapshot.bin -t /app/share/stremio/",
-                        "install -D Resources/*.pak -t /app/share/stremio/",
-                        "install -D Resources/icudtl.dat -t /app/share/stremio/",
-                        "install -D Resources/locales/*.pak -t /app/share/stremio/locales/"
-                    ],
-                    "sources": [
-                        {
-                            "type": "archive",
-                            "url": "https://cef-builds.spotifycdn.com/cef_binary_138.0.21+g54811fe+chromium-138.0.7204.101_linux64_minimal.tar.bz2",
-                            "sha256": "2a86ffe653dd65cf4920fc73aa225735231ac4bb80bcd40a75dfc0643897bcd2"
                         }
                     ]
                 }
@@ -168,7 +146,6 @@
                     "sha256": "dafe2e8f82cb97de1bd10db9e2ec4c07bbf53389b0799b1e095a918951e78fd4"
                 }
             ]
-        },
-        "shared-modules/libappindicator/libappindicator-gtk3-12.10.json"
+        }
     ]
 }
