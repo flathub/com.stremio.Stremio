@@ -70,7 +70,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Stremio/stremio-linux-shell.git",
-                    "tag": "v1.0.0-beta.15"
+                    "tag": "v1.0.0-beta.16"
                 },
                 "cargo-sources.json"
             ],
