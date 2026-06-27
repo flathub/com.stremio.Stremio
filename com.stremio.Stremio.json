@@ -33,7 +33,8 @@
         "--filesystem=xdg-run/stremio:create",
         "--talk-name=org.kde.StatusNotifierWatcher",
         "--own-name=org.mpris.MediaPlayer2.Stremio",
-        "--env=SERVER_PATH=/app/libexec/stremio/server.js"
+        "--env=SERVER_PATH=/app/libexec/stremio/server.js",
+        "--env=ANV_DEBUG=video-decode,video-encode"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin"
@@ -70,7 +71,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Stremio/stremio-linux-shell.git",
-                    "tag": "v1.0.0"
+                    "tag": "v1.0.1"
                 },
                 "cargo-sources.json"
             ],
