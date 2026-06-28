@@ -33,6 +33,7 @@
         "--filesystem=xdg-run/stremio:create",
         "--talk-name=org.kde.StatusNotifierWatcher",
         "--own-name=org.mpris.MediaPlayer2.Stremio",
+        "--env=LC_NUMERIC=C",
         "--env=SERVER_PATH=/app/libexec/stremio/server.js",
         "--env=ANV_DEBUG=video-decode,video-encode"
     ],
@@ -71,7 +72,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Stremio/stremio-linux-shell.git",
-                    "tag": "v1.0.1"
+                    "tag": "v1.0.2"
                 },
                 "cargo-sources.json"
             ],
@@ -83,7 +84,9 @@
                         "-Dbuild-date=false",
                         "-Dcplayer=false",
                         "-Dlibmpv=true",
-                        "-Dmanpage-build=disabled"
+                        "-Dmanpage-build=disabled",
+                        "-Dvaapi=enabled",
+                        "-Dvaapi-wayland=enabled"
                     ],
                     "cleanup": [
                         "/include",
