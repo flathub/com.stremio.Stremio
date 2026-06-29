@@ -31,6 +31,7 @@
         "--persist=.stremio-server",
         "--filesystem=xdg-download",
         "--filesystem=xdg-run/stremio:create",
+        "--filesystem=xdg-run/pipewire-0:ro",
         "--talk-name=org.kde.StatusNotifierWatcher",
         "--own-name=org.mpris.MediaPlayer2.Stremio",
         "--env=LC_NUMERIC=C",
@@ -72,7 +73,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Stremio/stremio-linux-shell.git",
-                    "tag": "v1.0.2"
+                    "tag": "v1.0.3"
                 },
                 "cargo-sources.json"
             ],
