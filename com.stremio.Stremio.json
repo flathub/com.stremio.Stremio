@@ -4,7 +4,8 @@
     "runtime-version": "50",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
-        "org.freedesktop.Sdk.Extension.rust-stable"
+        "org.freedesktop.Sdk.Extension.rust-stable",
+        "org.freedesktop.Sdk.Extension.llvm21"
     ],
     "add-extensions": {
         "org.freedesktop.Platform.codecs-extra": {
@@ -39,9 +40,49 @@
         "--env=ANV_DEBUG=video-decode,video-encode"
     ],
     "build-options": {
-        "append-path": "/usr/lib/sdk/rust-stable/bin"
+        "append-path": "/usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm21/bin",
+        "prepend-ld-library-path": "/usr/lib/sdk/llvm21/lib"
     },
     "modules": [
+        {
+            "name" : "webkitgtk",
+            "buildsystem" : "cmake-ninja",
+            "config-opts": [
+                "-DCMAKE_C_COMPILER=/usr/lib/sdk/llvm21/bin/clang",
+                "-DCMAKE_CXX_COMPILER=/usr/lib/sdk/llvm21/bin/clang++",
+                "-DPORT=GTK",
+                "-DUSE_GTK4=ON",
+                "-DENABLE_DOCUMENTATION=OFF",
+                "-DENABLE_INTROSPECTION=OFF",
+                "-DENABLE_JOURNALD_LOG=OFF",
+                "-DENABLE_QUARTZ_TARGET=OFF",
+                "-DENABLE_MINIBROWSER=OFF",
+                "-DENABLE_PDFJS=OFF",
+                "-DENABLE_SPEECH_SYNTHESIS=OFF",
+                "-DENABLE_SPELLCHECK=OFF",
+                "-DENABLE_VIDEO=OFF",
+                "-DENABLE_WEBDRIVER=OFF",
+                "-DENABLE_WEBXR=OFF",
+                "-DENABLE_WEB_AUDIO=OFF",
+                "-DUSE_GSTREAMER=OFF",
+                "-DUSE_LIBBACKTRACE=OFF",
+                "-DUSE_AVIF=OFF",
+                "-DUSE_WOFF2=OFF",
+                "-DUSE_LIBHYPHEN=OFF",
+                "-DUSE_LIBSECRET=OFF",
+                "-DUSE_SKIA_OPENTYPE_SVG=OFF",
+                "-DUSE_SYSTEM_SYSPROF_CAPTURE=OFF",
+                "-DUSE_SYSTEM_UNIFDEF=OFF",
+                "-DUSE_VULKAN=OFF"
+            ],
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://github.com/WebKit/WebKit.git",
+                    "tag" : "webkitgtk-2.53.4"
+                }
+            ]
+        },
         {
             "name": "stremio",
             "buildsystem": "simple",
