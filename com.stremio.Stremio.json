@@ -60,12 +60,14 @@
                 "install -Dm644 data/server.js -t /app/libexec/stremio",
                 "install -Dm755 data/stremio.sh /app/bin/stremio",
                 "install -Dm644 data/icons/com.stremio.Stremio.svg -t /app/share/icons/hicolor/scalable/apps/",
-                "install -Dm644 data/com.stremio.Stremio.desktop /app/share/applications/com.stremio.Stremio.desktop",
-                "install -Dm644 data/com.stremio.Stremio.metainfo.xml /app/share/metainfo/com.stremio.Stremio.metainfo.xml",
-                "install -Dm644 data/com.stremio.Stremio.service /app/share/dbus-1/services/com.stremio.Stremio.service",
+                "install -Dm644 data/com.stremio.Stremio.desktop -t /app/share/applications/",
+                "install -Dm644 data/com.stremio.Stremio.metainfo.xml -t /app/share/metainfo/",
+                "install -Dm644 data/com.stremio.Stremio.service -t /app/share/dbus-1/services/",
+                "install -Dm644 data/com.stremio.Stremio.gschema.xml -t /app/share/glib-2.0/schemas/",
                 "install -Dm644 po/es/LC_MESSAGES/stremio.mo -t /app/share/locale/es/LC_MESSAGES/",
                 "install -Dm644 po/fr/LC_MESSAGES/stremio.mo -t /app/share/locale/fr/LC_MESSAGES/",
                 "install -Dm644 ./LICENSE -t /app/share/licenses/stremio/",
+                "glib-compile-schemas /app/share/glib-2.0/schemas",
                 "mkdir -p /app/lib/codecs-extra",
                 "mkdir -p /app/lib/intel-vaapi-driver"
             ],
@@ -73,7 +75,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Stremio/stremio-linux-shell.git",
-                    "tag": "v1.0.3"
+                    "tag": "v1.1.0"
                 },
                 "cargo-sources.json"
             ],
