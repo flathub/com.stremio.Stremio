@@ -73,7 +73,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Stremio/stremio-linux-shell.git",
-                    "tag": "v1.0.3"
+                    "commit": "3744d46ed0fbe4bff38399f53649be55a4d0a464"
                 },
                 "cargo-sources.json"
             ],
@@ -86,8 +86,18 @@
                         "-Dcplayer=false",
                         "-Dlibmpv=true",
                         "-Dmanpage-build=disabled",
+                        "-Dx11=enabled",
+                        "-Dcuda-hwaccel=enabled",
+                        "-Dcuda-interop=enabled",
+                        "-Dgl=enabled",
+                        "-Dgl-x11=enabled",
+                        "-Degl=enabled",
+                        "-Degl-x11=enabled",
                         "-Dvaapi=enabled",
-                        "-Dvaapi-wayland=enabled"
+                        "-Dvaapi-wayland=enabled",
+                        "-Dvaapi-x11=enabled",
+                        "-Dvdpau=enabled",
+                        "-Dvdpau-gl-x11=enabled"
                     ],
                     "cleanup": [
                         "/include",
@@ -131,6 +141,18 @@
                                     "type": "archive",
                                     "url": "https://github.com/libass/libass/archive/0.17.4.tar.gz",
                                     "sha256": "c287d180d93dc9c9021872574b618ac49027e84cc90e1289318b1ee68bb42251"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "libXpresent",
+                            "buildsystem": "autotools",
+                            "sources": [
+                                {
+                                    "type": "git",
+                                    "url": "https://gitlab.freedesktop.org/xorg/lib/libxpresent.git",
+                                    "tag": "libXpresent-1.0.2",
+                                    "commit": "4d92149372461bf575e8a09b1064a2884c38c3aa"
                                 }
                             ]
                         }
