@@ -34,7 +34,6 @@
         "--filesystem=xdg-run/pipewire-0:ro",
         "--talk-name=org.kde.StatusNotifierWatcher",
         "--own-name=org.mpris.MediaPlayer2.Stremio",
-        "--env=LC_NUMERIC=C",
         "--env=SERVER_PATH=/app/libexec/stremio/server.js",
         "--env=ANV_DEBUG=video-decode,video-encode"
     ],
@@ -66,6 +65,7 @@
                 "install -Dm644 data/com.stremio.Stremio.gschema.xml -t /app/share/glib-2.0/schemas/",
                 "install -Dm644 po/es/LC_MESSAGES/stremio.mo -t /app/share/locale/es/LC_MESSAGES/",
                 "install -Dm644 po/fr/LC_MESSAGES/stremio.mo -t /app/share/locale/fr/LC_MESSAGES/",
+                "install -Dm644 data/stremio.1 -t /app/share/man/man1/",
                 "install -Dm644 ./LICENSE -t /app/share/licenses/stremio/",
                 "glib-compile-schemas /app/share/glib-2.0/schemas",
                 "mkdir -p /app/lib/codecs-extra",
@@ -75,7 +75,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Stremio/stremio-linux-shell.git",
-                    "tag": "v1.2.0"
+                    "tag": "v1.2.1"
                 },
                 "cargo-sources.json"
             ],
