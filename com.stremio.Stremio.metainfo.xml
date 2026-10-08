@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+    <id>com.stremio.Stremio</id>
+    <name>Stremio</name>
+    <summary>Freedom to Stream</summary>
+    <description>
+        <p>Stremio offers a secure, modern and seamless entertainment experience.</p>
+        <p>With its easy-to-use interface and diverse content library, including 4K HDR support, users can enjoy their favorite movies and TV shows across all their devices.</p>
+        <p>And with its commitment to security, Stremio is the ultimate choice for a worry-free, high-quality streaming experience.</p>
+    </description>
+    <developer id="com.stremio">
+        <name>Stremio</name>
+    </developer>
+
+    <branding>
+        <color type="primary" scheme_preference="light">#9C97D8</color>
+        <color type="primary" scheme_preference="dark">#2E286D</color>
+    </branding>
+
+    <screenshots>
+        <screenshot type="default">
+            <image>
+                https://raw.githubusercontent.com/Stremio/stremio-linux-shell/refs/heads/main/data/screenshots/screenshot1.png
+            </image>
+            <caption>Home page</caption>
+        </screenshot>
+        <screenshot>
+            <image>
+                https://raw.githubusercontent.com/Stremio/stremio-linux-shell/refs/heads/main/data/screenshots/screenshot2.png
+            </image>
+            <caption>Details page</caption>
+        </screenshot>
+        <screenshot>
+            <image>
+                https://raw.githubusercontent.com/Stremio/stremio-linux-shell/refs/heads/main/data/screenshots/screenshot3.png
+            </image>
+            <caption>Player page</caption>
+        </screenshot>
+    </screenshots>
+
+    <metadata_license>MIT</metadata_license>
+    <project_license>GPL-3.0-only</project_license>
+    <content_rating type="oars-1.1" />
+
+    <url type="homepage">https://github.com/Stremio/stremio-linux-shell</url>
+    <url type="bugtracker">https://github.com/Stremio/stremio-linux-shell/issues</url>
+
+    <translation type="gettext">stremio</translation>
+
+    <launchable type="desktop-id">com.stremio.Stremio.desktop</launchable>
+
+    <releases>
+        <release version="1.2.2" date="2026-10-07">
+            <description>
+                <p>Fix rendering issues related to WebKit update</p>
+                <p>Fix player loading indefinitely when stream fails to load</p>
+                <p>Fix app unable to write urls to clipboard</p>
+            </description>
+        </release>
+        <release version="1.2.1" date="2026-09-29">
+            <description>
+                <p>Reduce cpu work when idle</p>
+                <p>Fix window header not always hiding when fullscreened</p>
+                <p>Fix media controls not supported in some cases</p>
+            </description>
+        </release>
+        <release version="1.2.0" date="2026-08-03">
+            <description>
+                <p>Add discord rich presence support</p>
+                <p>Fix random app freezes</p>
+            </description>
+        </release>
+        <release version="1.1.4" date="2026-07-23">
+            <description>
+                <p>Fix screen blank behavior during playback</p>
+                <p>Fix gamepad not recognized</p>
+                <p>Fix server process running after main one crashed</p>
+            </description>
+        </release>
+        <release version="1.1.3" date="2026-07-20">
+            <description>
+                <p>Fix app freeze during playback change</p>
+            </description>
+        </release>
+        <release version="1.1.2" date="2026-07-06">
+            <description>
+                <p>Fix external player m3u8 playlist opening</p>
+                <p>Fix downloads page access</p>
+            </description>
+        </release>
+        <release version="1.1.1" date="2026-07-02">
+            <description>
+                <p>Fix next video behavior</p>
+            </description>
+        </release>
+        <release version="1.1.0" date="2026-07-01">
+            <description>
+                <p>Improve window appearance under KDE</p>
+                <p>Remember window state</p>
+                <p>Fix crash after quitting the app while playing</p>
+            </description>
+        </release>
+        <release version="1.0.3" date="2026-06-29">
+            <description>
+                <p>Fix low audio volume with Flatpak</p>
+            </description>
+        </release>
+        <release version="1.0.2" date="2026-06-28">
+            <description>
+                <p>Fix video acceleration with VA-API for Intel</p>
+                <p>Fix auto play next video when playback ended</p>
+            </description>
+        </release>
+        <release version="1.0.1" date="2026-06-27">
+            <description>
+                <p>Fix video acceleration with Vulkan for Intel</p>
+            </description>
+        </release>
+        <release version="1.0.0" date="2026-06-26" />
+    </releases>
+</component>
