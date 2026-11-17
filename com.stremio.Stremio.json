@@ -20,6 +20,7 @@
             "enable-if": "have-intel-gpu"
         }
     },
+    "separate-locales": false,
     "command": "stremio",
     "finish-args": [
         "--socket=wayland",
@@ -30,6 +31,7 @@
         "--device=all",
         "--persist=.stremio-server",
         "--filesystem=xdg-download",
+        "--filesystem=xdg-config/mpv:ro",
         "--filesystem=xdg-run/stremio:create",
         "--filesystem=xdg-run/pipewire-0:ro",
         "--filesystem=xdg-run/discord-ipc-0",
@@ -60,16 +62,17 @@
                 "install -Dm755 target/release/stremio-linux-shell /app/libexec/stremio/stremio",
                 "install -Dm644 data/server.js -t /app/libexec/stremio",
                 "install -Dm755 data/stremio.sh /app/bin/stremio",
+                "mkdir -p /app/etc/fonts",
+                "sh data/fonts-conf.sh > /app/etc/fonts/stremio.conf",
                 "install -Dm644 data/icons/com.stremio.Stremio.svg -t /app/share/icons/hicolor/scalable/apps/",
                 "install -Dm644 data/com.stremio.Stremio.desktop -t /app/share/applications/",
                 "install -Dm644 com.stremio.Stremio.metainfo.xml -t /app/share/metainfo/",
                 "install -Dm644 data/com.stremio.Stremio.service -t /app/share/dbus-1/services/",
-                "install -Dm644 data/com.stremio.Stremio.gschema.xml -t /app/share/glib-2.0/schemas/",
-                "install -Dm644 po/es/LC_MESSAGES/stremio.mo -t /app/share/locale/es/LC_MESSAGES/",
-                "install -Dm644 po/fr/LC_MESSAGES/stremio.mo -t /app/share/locale/fr/LC_MESSAGES/",
+                "install -Dm644 target/schemas/gschemas.compiled -t /app/share/glib-2.0/schemas/",
+                "install -Dm644 target/locale/es/LC_MESSAGES/stremio.mo -t /app/share/locale/es/LC_MESSAGES/",
+                "install -Dm644 target/locale/fr/LC_MESSAGES/stremio.mo -t /app/share/locale/fr/LC_MESSAGES/",
                 "install -Dm644 data/stremio.1 -t /app/share/man/man1/",
                 "install -Dm644 ./LICENSE -t /app/share/licenses/stremio/",
-                "glib-compile-schemas /app/share/glib-2.0/schemas",
                 "mkdir -p /app/lib/codecs-extra",
                 "mkdir -p /app/lib/intel-vaapi-driver"
             ],
@@ -77,7 +80,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Stremio/stremio-linux-shell.git",
-                    "tag": "v1.2.2"
+                    "tag": "v1.3.0"
                 },
                 {
                     "type": "file",

@@ -3294,6 +3294,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/shellexpand/shellexpand-3.1.2.crate",
+        "sha256": "32824fab5e16e6c4d86dc1ba84489390419a39f97699852b66480bb87d297ed8",
+        "dest": "cargo/vendor/shellexpand-3.1.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"32824fab5e16e6c4d86dc1ba84489390419a39f97699852b66480bb87d297ed8\", \"files\": {}}",
+        "dest": "cargo/vendor/shellexpand-3.1.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/shlex/shlex-2.0.1.crate",
         "sha256": "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba",
         "dest": "cargo/vendor/shlex-2.0.1"
